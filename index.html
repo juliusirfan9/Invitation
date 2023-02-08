@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="D:\xampp2\htdocs\InvitationNurul\style.css" />
+    <title>The Wedding Julius & Nurul</title>
+  </head>
+  <body>
+
+    <div class="container-fluid" id="home">
+      <!-- Navbar Awal -->
+      <nav class="navbar fixed-top navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#home">
+            <img src="D:\xampp2\htdocs\InvitationNurul\imgicon\homeicon.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />
+          </a>
+          <a class="navbar-brand" href="#story">
+            <img src="D:\xampp2\htdocs\InvitationNurul\imgicon\coupleicon.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />
+          </a>
+          <a class="navbar-brand" href="#Date">
+            <img src="D:\xampp2\htdocs\InvitationNurul\imgicon\dateicon.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />
+          </a>
+          <a class="navbar-brand" href="#map">
+            <img src="D:\xampp2\htdocs\InvitationNurul\imgicon\locicon.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />
+          </a>
+          <a class="navbar-brand" href="#story-2">
+            <img src="D:\xampp2\htdocs\InvitationNurul\imgicon\imageicon.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />
+          </a>
+        </div>
+      </nav>
+      
+    </div>
+ <!-- Navbar Akhir -->
+
+ <div class="tampil" id="tampil">
+  <div class="tampil-body">
+    <div>
+      <h4>Yth. </br>
+      Toto dan Partner</br>
+      ditempat.
+      </h4>
+      <p>Kami bermaksud mengundang saudara/i/Bapak/Ibu untuk menghadiri acara penikahan kami.</p>
+      <h3>Julius Irfan</h3>
+      <h3>&</h3>
+      <h3>Nurul Kholifatun Nisa</h3>
+      <button class="btn btn-secondary" id="tampil" onclick="putarmusic()">Open Invitation</button>
+    </div>
+  </div>
+</div>
+
+<script>
+var a = document.getElementById('tampil');
+  function putarmusic(){
+    a.style.display = "none";
+    var musik = new Audio('song/Raksa.mp3');
+    musik.play();
+    musik.loop=true;
+  }
+
+/*
+    function mulaiAudio() {
+      var play = document.getElementById("play");
+      var mute = document.getElementById("mute");
+
+      play.addEventListener('click',fplay);
+      mute.addEventListener('click',fmute);
+
+      function fplay() {
+        if(musik.paused)
+        musik.play();
+        play.style.background="url(imgicon/pause.png)";
+      }else{
+        musik.pause();
+        play.style.background="url(imgicon/play.png)";
+      }
+
+      function mute() {
+        if(musik.muted) {
+          musik.muted = false;
+          mute.style.background="url(imgicon/mute.png)";
+        }else{
+          musik.muted = true;
+          mute.style.background="url(imgicon/unmute.png)";
+        }
+      }
+
+    }
+*/
+
+ window.addEventListener('load', mulaiAudio);
+</script>
+
+<!-- Home -->
+    <div id="home" class="position-relative home">
+      <img src="D:\xampp2\htdocs\InvitationNurul\gif\hero.gif" class="img-fluid" alt="background-1" height="120%" width="120%">
+        <div class="position-absolute top-50 start-50 translate-middle-x home-style">
+          <h1 class="text-center text-light fs-3">You Are Invited to The Wedding of </br>
+          Julius Irfan & Nurul Kholifatun Nisa</h1>
+        </br>
+        <h4 class="text-center text-light fs-3">Saturday, 17 December 2022</h4></br>
+        <a class="btn btn-secondary position-absolute start-50 translate-middle" target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NTRnbHE2dWRvNWNwMWE5bzQxM2VwNzVjdW8ganVsaXVzLmlyZmFuOUBt&amp;tmsrc=julius.irfan9%40gmail.com" role="button">Save the Date</a>   
+      </div>
+      </br>
+      </div>
+
+<!-- Akhir Home-->
+
+<button class="control-audio" id="play"></button>
+<button class="control-audio" id="mute"></button>
+
+<!-- Awal Hitung Mundur -->
+
+<div class="countdown">
+  <br />
+  <p class="h4 text-center">Will be held on</p>
+  <script>
+    // Mengatur waktu akhir perhitungan mundur
+    var countDownDate = new Date('Dec 17, 2022 00:00:00').getTime();
+
+    // Memperbarui hitungan mundur setiap 1 detik
+    var x = setInterval(function () {
+      // Untuk mendapatkan tanggal dan waktu hari ini
+      var now = new Date().getTime();
+
+      // Temukan jarak antara sekarang dan tanggal hitung mundur
+      var distance = countDownDate - now;
+
+      // Perhitungan waktu untuk hari, jam, menit dan detik
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Keluarkan hasil dalam elemen dengan id = "demo"
+
+      document.getElementById('days').innerHTML = days + '';
+      document.getElementById('hours').innerHTML = hours + '';
+      document.getElementById('minutes').innerHTML = minutes + '';
+      document.getElementById('seconds').innerHTML = seconds + '';
+
+      // Jika hitungan mundur selesai, tulis beberapa teks
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById('demo').innerHTML = 'EXPIRED';
+      }
+    }, 1000);
+  </script>
+  <p id="countdown"></p>
+</div>
+<center>
+<div class="container px-4">
+  <div class="row justify-content-center gx-4">
+    <div class="col-3 stopwatch p-4 border bg-secondary rounded-circle">
+      <p id="days"></p>
+      <p>day</p>
+    </div>
+    <div class="col-3 stopwatch p-4 border bg-secondary rounded-circle">
+      <p id="hours"></p>
+      <p>hours</p>
+    </div>
+    <div class="col-3 stopwatch p-4 border bg-secondary rounded-circle">
+      <p id="minutes"></p>
+      <p>minutes</p>
+    </div>
+    <div class="col-3 stopwatch p-4 border bg-secondary rounded-circle">
+      <p id="seconds"></p>
+      <p>seconds</p>
+    </div>
+  </div>
+</div>
+</center>
+
+<!-- Akhir Hitung Mundur -->
+
+<div class="pembatas">
+<svg class="position-absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#C9AA88" fill-opacity="1" d="M0,192L40,176C80,160,160,128,240,138.7C320,149,400,203,480,208C560,213,640,171,720,176C800,181,880,235,960,229.3C1040,224,1120,160,1200,154.7C1280,149,1360,203,1400,229.3L1440,256L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+<svg class="position-absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#EDE2C8" fill-opacity="1" d="M0,0L30,10.7C60,21,120,43,180,69.3C240,96,300,128,360,128C420,128,480,96,540,80C600,64,660,64,720,69.3C780,75,840,85,900,128C960,171,1020,245,1080,266.7C1140,288,1200,256,1260,208C1320,160,1380,96,1410,64L1440,32L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
+</div>
+
+<!-- Introduction-->
+
+<div class="position-relative introduction ">
+        <img src="D:\xampp2\htdocs\InvitationNurul\img\forest.jpg" class="img-fluid" alt="background-1" height="100%" width="100%">
+          <div class="position-absolute top-50 start-50 translate-middle-x a1">
+            <figure class="text-center">
+              <blockquote class="blockquote fs-5">
+                <p>وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً إِنَّ فِي ذَلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ
+                </br>
+                Artinya: "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+              </br>
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-light">
+                QS. Ar Rum  <cite title="Source Title">ayat 21</cite>
+              </figcaption>
+            </figure>
+          </div>
+</div>
+
+<!-- Akhir Introduction-->
+    
+<div class="pembatas-dua position-relative">
+  <svg class="position-absolute bottom-0 end-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#C9AA88" fill-opacity="1" d="M0,192L40,176C80,160,160,128,240,138.7C320,149,400,203,480,234.7C560,267,640,277,720,272C800,267,880,245,960,229.3C1040,213,1120,203,1200,197.3C1280,192,1360,192,1400,192L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+  <svg class="position-absolute bottom-0 end-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#EDE2C8" fill-opacity="1" d="M0,96L34.3,128C68.6,160,137,224,206,224C274.3,224,343,160,411,133.3C480,107,549,117,617,154.7C685.7,192,754,256,823,282.7C891.4,309,960,299,1029,266.7C1097.1,235,1166,181,1234,165.3C1302.9,149,1371,171,1406,181.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+</div>
+      
+<!-- Story -->
+
+<div id="story" class="">
+<div class="story text-center text-dark" >
+<h4> Our Story</h4> 
+  </br>
+  <p class="text-center">
+    We have been in a relationship since 2015. The first time I met him in high school was normal. Chatting, joking, doing chores together feels normal. Until we find a match for each other. our relationship goes day after day, month after month, year after year. We are committed to staying together. In the 7th year, we decided to go to the next stage. To the level of marriage.
+  </p>
+  <img src="D:\xampp2\htdocs\InvitationNurul\img\J-atas.png" alt="j-atas" width="100%" height="100%">
+  <div class="ratio ratio-16x9">
+    <video controls autoplay muted loop>
+      <source src="D:\xampp2\htdocs\InvitationNurul\vid\wedding-story.mp4" type="video/mp4" >
+    </video>
+  </div>
+  <img src="D:\xampp2\htdocs\InvitationNurul\img\J-bawah.png" alt="j-bawah" width="100%" height="100%">
+  <p class="text-center">
+    Marriage is not the end of a relationship, but the beginning of a more complex relationship. We hope that this marriage will bring harmony, maturity, happiness and a better reality. it is the way to the happiness of this world and the hereafter.
+  </p>
+</div>
+</div>
+
+<!-- Akhir Story -->
+
+<!-- Awal Corousel -->
+
+<div class="story-2" id="story-2">
+    <div class="story-2" width ="50%" height="50%">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 1"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="D:\xampp2\htdocs\InvitationNurul\img-story\2019.jpg" class="d-block w-100" alt="2019">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>2015</h5>
+              <p>We noticed each other</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="D:\xampp2\htdocs\InvitationNurul\img-story\2017.jpg" class="d-block w-100" alt="2017">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="D:\xampp2\htdocs\InvitationNurul\img-story\2018.jpg" class="d-block w-100" alt="2018">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="D:\xampp2\htdocs\InvitationNurul\img-story\2020.jpg" class="d-block w-100" alt="2020">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="D:\xampp2\htdocs\InvitationNurul\img-story\2022.jpg" class="d-block w-100" alt="2022">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="D:\xampp2\htdocs\InvitationNurul\img-story\2021.jpg" class="d-block w-100" alt="2021">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+</div>
+
+<!-- Akhir Corousel -->
+
+<div class="pembatas-empat position-relative">
+  <svg class="position-absolute bottom-0 end-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#C9AA88" fill-opacity="1" d="M0,192L40,176C80,160,160,128,240,138.7C320,149,400,203,480,234.7C560,267,640,277,720,272C800,267,880,245,960,229.3C1040,213,1120,203,1200,197.3C1280,192,1360,192,1400,192L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+  <svg class="position-absolute bottom-0 end-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#EDE2C8" fill-opacity="1" d="M0,96L34.3,128C68.6,160,137,224,206,224C274.3,224,343,160,411,133.3C480,107,549,117,617,154.7C685.7,192,754,256,823,282.7C891.4,309,960,299,1029,266.7C1097.1,235,1166,181,1234,165.3C1302.9,149,1371,171,1406,181.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+</div>
+</br>
+<!-- Akhir Story-->
+
+<!-- Awal Date -->
+
+<center>
+<div id="Date" class="card-1">
+  <h4 class="text-center">Place and Date</h4>
+  <p class="p-5">We would like to invite you to attend our wedding which will be held on the schedule below :</p>
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-6">
+        <p class="text-center">
+          AKAD
+        </p>
+        <br>
+        <div class="card" style="width: 14rem;">
+          <img src="D:\xampp2\htdocs\InvitationNurul\img\akad.jpg" class="card-img-top" alt="AKAD">
+          <div class="card-body">
+            <p class="card-text">
+              <b>Place</b>   : Masjid Nurul Bayan</br>
+              <b>Address</b> : Jl. Fki 31 No.132, RT.18/RW.12, Kapuk, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11720 </br>
+              <b>Date</b>    : 12 December 2022 </br> 
+              <b>Time</b>    : 08.00 - Finish
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <p class="text-center">
+          RESEPSI
+        </p>
+        <br>
+        <div class="card" style="width: 14rem;">
+          <img src="D:\xampp2\htdocs\InvitationNurul\img\resepsi.jpg" class="card-img-top" alt="resepsi">
+          <div class="card-body">
+            <p class="card-text">
+              <b>Place</b>   : Aula SD & SMP Merdeka Sari</br>
+              <b>Address</b> : Jl. Kapuk Kb. Jahe No.81, RT.10/RW.12, Kapuk, Kec. Cengkareng, Jakarta Barat, DKI Jakarta 11720</br>
+              <b>Date</b>    : 17 December 2022 </br> 
+              <b>Time</b>    : 10.00 - Finish
+            </p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="p-5">We hope that you are willing to attend to give prayers and blessings for our marriage.</p>
+</br>
+</br>
+</br>
+</br>
+</div>
+</center>
+</br>
+<div class="map position-relative">
+  <div class="pembatas-tiga">
+    <svg class="position-absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#C9AA88" fill-opacity="1" d="M0,192L40,176C80,160,160,128,240,138.7C320,149,400,203,480,208C560,213,640,171,720,176C800,181,880,235,960,229.3C1040,224,1120,160,1200,154.7C1280,149,1360,203,1400,229.3L1440,256L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+    <svg class="position-absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#6c757d" fill-opacity="1" d="M0,0L30,10.7C60,21,120,43,180,69.3C240,96,300,128,360,128C420,128,480,96,540,80C600,64,660,64,720,69.3C780,75,840,85,900,128C960,171,1020,245,1080,266.7C1140,288,1200,256,1260,208C1320,160,1380,96,1410,64L1440,32L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
+</div>
+<div class="pembatas-empat position-relative">
+  <svg class="position-absolute bottom-0 end-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#C9AA88" fill-opacity="1" d="M0,192L40,176C80,160,160,128,240,138.7C320,149,400,203,480,234.7C560,267,640,277,720,272C800,267,880,245,960,229.3C1040,213,1120,203,1200,197.3C1280,192,1360,192,1400,192L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+  <svg class="position-absolute bottom-0 end-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#6c757d" fill-opacity="1" d="M0,96L34.3,128C68.6,160,137,224,206,224C274.3,224,343,160,411,133.3C480,107,549,117,617,154.7C685.7,192,754,256,823,282.7C891.4,309,960,299,1029,266.7C1097.1,235,1166,181,1234,165.3C1302.9,149,1371,171,1406,181.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+</div>
+</br>
+<!-- Our Moment-->
+
+<div class="moment">
+  <h4 class="text-center">Our Moment</h4>
+<p class="p-5 text-center">"Seeing your smile is happiness for me. Meanwhile, having you is the most beautiful gift in my life.</p>
+</div>
+<img src="D:\xampp2\htdocs\InvitationNurul\img\N-atas.png" alt="n-atas" height="100%" width="100%">
+<!-- Awal Corousel -->
+
+<div class="story-2 ">
+  <div class="story-2" width ="50%" height="50%">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 1"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="D:\xampp2\htdocs\InvitationNurul\img-story\2019.jpg" class="d-block w-100" alt="2019">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>2015</h5>
+            <p>We noticed each other</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="D:\xampp2\htdocs\InvitationNurul\img-story\2017.jpg" class="d-block w-100" alt="2017">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="D:\xampp2\htdocs\InvitationNurul\img-story\2018.jpg" class="d-block w-100" alt="2018">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="D:\xampp2\htdocs\InvitationNurul\img-story\2020.jpg" class="d-block w-100" alt="2020">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="D:\xampp2\htdocs\InvitationNurul\img-story\2022.jpg" class="d-block w-100" alt="2022">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="D:\xampp2\htdocs\InvitationNurul\img-story\2021.jpg" class="d-block w-100" alt="2021">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>                                                                                  
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Akhir Corousel -->
+
+<img src="D:\xampp2\htdocs\InvitationNurul\img\N-bawah.png" alt="n-bawah" height="100%" width="100%">
+
+<!-- Akhir Our Moment-->
+
+<!-- Akhir Date -->
+<!--Awal map-->
+<div class="map position-relative">
+  <div class="pembatas-tiga">
+    <svg class="position-absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#C9AA88" fill-opacity="1" d="M0,192L40,176C80,160,160,128,240,138.7C320,149,400,203,480,208C560,213,640,171,720,176C800,181,880,235,960,229.3C1040,224,1120,160,1200,154.7C1280,149,1360,203,1400,229.3L1440,256L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+    <svg class="position-absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#EDE2C8" fill-opacity="1" d="M0,0L30,10.7C60,21,120,43,180,69.3C240,96,300,128,360,128C420,128,480,96,540,80C600,64,660,64,720,69.3C780,75,840,85,900,128C960,171,1020,245,1080,266.7C1140,288,1200,256,1260,208C1320,160,1380,96,1410,64L1440,32L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
+</div>  
+  <img class="imageMap" src="D:\xampp2\htdocs\InvitationNurul\img\forest.jpg" alt="forest" height="100%" width="100%">
+  <div class="position-absolute top-50 start-50 translate-middle map-2">
+    <h4 id="map" class="text-center text-light">Maps Lokasi Resepsi</h4>
+    </br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.945993694899!2d106.7441231147687!3d-6.1379582955558485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7d8b3c7d0a5%3A0x5bd6007603b7be79!2sSD-SMP%20Merdeka%20Sari!5e0!3m2!1sid!2sid!4v1668972944727!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded img-thumbnail" width="150%" height="150%"></iframe>
+  </div>
+</div>
+<div class="pembatas-empat position-relative">
+  <svg class="position-absolute bottom-0 end-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#C9AA88" fill-opacity="1" d="M0,192L40,176C80,160,160,128,240,138.7C320,149,400,203,480,234.7C560,267,640,277,720,272C800,267,880,245,960,229.3C1040,213,1120,203,1200,197.3C1280,192,1360,192,1400,192L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+  <svg class="position-absolute bottom-0 end-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#EDE2C8" fill-opacity="1" d="M0,96L34.3,128C68.6,160,137,224,206,224C274.3,224,343,160,411,133.3C480,107,549,117,617,154.7C685.7,192,754,256,823,282.7C891.4,309,960,299,1029,266.7C1097.1,235,1166,181,1234,165.3C1302.9,149,1371,171,1406,181.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+</div>
+<!--Akhir map-->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
